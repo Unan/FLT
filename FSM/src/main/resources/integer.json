@@ -1,0 +1,20 @@
+[
+  {
+    "start": "[s0]",
+    "finish": "[s2]",
+    "inputs": {
+      "digit": "^[0-9]{1}$",
+      "non-digit": "^[^0-9]{1}$"
+    },
+    "matrix": {
+      "s0": {
+        "digit": ["s1"],
+        "non-digit": ["s2"]
+      },
+      "s1": {
+        "digit": ["s1"],
+        "non-digit": ["s2"]
+      }
+    }
+  }
+]

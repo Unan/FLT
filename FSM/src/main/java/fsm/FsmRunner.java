@@ -17,6 +17,16 @@ public class FsmRunner {
     private int maxSuccess = 0;
     private boolean success = false;
 
+    public FsmRunner (FSM fsm, String input) {
+        if (skip >= input.length()) {
+            throw new IllegalArgumentException("skip should be shorter then input length");
+        }
+        this.fsm = fsm;
+        this.input = input;
+        this.skip = 0;
+        this.currentState = fsm.getStart();
+    }
+
     public FsmRunner(FSM fsm, String input, int skip) {
         if (skip >= input.length()) {
             throw new IllegalArgumentException("skip should be shorter then input length");

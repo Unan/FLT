@@ -2,6 +2,9 @@ package component;
 
 import java.util.regex.Pattern;
 
+/**
+ * Паттерны(типы) входных данных(символов) описанных с помощью регулярных выражений
+ */
 public class InputType {
 
     private String inputName;

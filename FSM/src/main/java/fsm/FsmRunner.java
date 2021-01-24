@@ -6,7 +6,7 @@ import component.TransitionFunction;
 /**
  * Получает на вход класс-автомат {@link FSM}, которому подаёт на вход строку и управляет его состояниями
  * основываясь на его фукциях перехода
- * */
+ */
 public class FsmRunner {
 
     private FSM fsm;
@@ -17,7 +17,7 @@ public class FsmRunner {
     private int maxSuccess = 0;
     private boolean success = false;
 
-    public FsmRunner (FSM fsm, String input) {
+    public FsmRunner(FSM fsm, String input) {
         if (skip >= input.length()) {
             throw new IllegalArgumentException("skip should be shorter then input length");
         }
@@ -41,7 +41,7 @@ public class FsmRunner {
         char[] inputArray = input.toCharArray();
         for (int i = skip; i < inputArray.length; i++) {
             currentState = step(inputArray[i]);
-            if (currentState.equals(fsm.getFinish())) {
+            if (fsm.getFinish().contains(currentState)) {
                 break;
             } else {
                 maxSuccess++;

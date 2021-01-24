@@ -4,9 +4,9 @@ package component;
  * Функция перехода. Содержит информацию об исходном состоянии {@link TransitionFunction#originalState},
  * типе входного символа {@link TransitionFunction#inputType}
  * и состостояние в которое нужно перейти {@link TransitionFunction#transitionState}
- * */
+ */
 public class TransitionFunction {
-    
+
     private String originalState;
     private String inputType;
     private String transitionState;

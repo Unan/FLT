@@ -7,15 +7,19 @@ import java.util.List;
 
 /**
  * Класс - автомат
+ * Начальное состояние {@link FSM#start}
+ * Множество конечных состояний {@link FSM#finish}
+ * Алфавит {@link FSM#inputs}
+ * Функции переходов {@link FSM#transitionFunctions}
  */
 public class FSM {
 
     private String start;
-    private String finish;
+    private List<String> finish;
     private List<InputType> inputs;
     private List<TransitionFunction> transitionFunctions;
 
-    public FSM(String start, String finish, List<InputType> inputs, List<TransitionFunction> transitionFunctions) {
+    public FSM(String start, List<String> finish, List<InputType> inputs, List<TransitionFunction> transitionFunctions) {
         this.start = start;
         this.finish = finish;
         this.inputs = inputs;
@@ -40,11 +44,11 @@ public class FSM {
         this.start = start;
     }
 
-    public String getFinish() {
+    public List<String> getFinish() {
         return finish;
     }
 
-    public void setFinish(String finish) {
+    public void setFinish(List<String> finish) {
         this.finish = finish;
     }
 

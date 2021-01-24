@@ -53,7 +53,7 @@ public class FsmReader {
     private static class FsmJson {
 
         private String start;
-        private String finish;
+        private List<String> finish;
         private Map<String, String> inputs;
         private Map<String, Map<String, String>> matrix;
 
@@ -75,11 +75,11 @@ public class FsmReader {
             this.start = start;
         }
 
-        public String getFinish() {
+        public List<String> getFinish() {
             return finish;
         }
 
-        public void setFinish(String finish) {
+        public void setFinish(List<String> finish) {
             this.finish = finish;
         }
 

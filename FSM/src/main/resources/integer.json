@@ -3,17 +3,18 @@
   "finish": ["s1"],
   "inputs": {
     "digit": "^[0-9]{1}$",
-    "non-digit": "^[^0-9]{1}$"
+    "sign": "^[+-]{1}$"
   },
   "matrix": {
     "s0": {
       "digit": "s1",
-      "non-digit": "s2"
+      "sign": "s2"
     },
     "s1": {
       "digit": "s1"
     },
     "s2": {
+      "digit": "s1"
     }
   }
 }

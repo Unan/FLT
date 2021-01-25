@@ -39,7 +39,7 @@ public class FsmReader {
     private FsmJson readFsmJson() throws IOException {
         File file = new File(Objects.requireNonNull(getClass()
                 .getClassLoader()
-                .getResource("double.json"))
+                .getResource("integer.json"))
                 .getFile());
 
         StringBuilder stringBuilder = new StringBuilder();

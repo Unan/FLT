@@ -1,0 +1,47 @@
+{
+  "start": "s0",
+  "finish": ["s2", "s3", "s4", "s6"],
+  "inputs": {
+    "digit": "^[0-9]{1}$",
+    "sign": "^[+-]{1}$",
+    "dot": "^[.]{1}$",
+    "exp": "^[eE]{1}$"
+  },
+  "matrix": {
+    "s0": {
+      "sign": "s1",
+      "digit": "s2",
+      "dot": "s8"
+    },
+    "s1": {
+      "digit": "s2",
+      "dot": "s8"
+    },
+    "s2": {
+      "digit": "s2",
+      "dot": "s3",
+      "exp": "s7"
+    },
+    "s3": {
+      "digit": "s4",
+      "exp": "s7"
+    },
+    "s4": {
+      "digit": "s4",
+      "exp": "s7"
+    },
+    "s5": {
+      "digit": "s6"
+    },
+    "s6": {
+      "digit": "s6"
+    },
+    "s7": {
+      "sign": "s5",
+      "digit": "s6"
+    },
+    "s8": {
+      "digit": "s4"
+    }
+  }
+}

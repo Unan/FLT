@@ -1,6 +1,6 @@
 {
   "start": "s0",
-  "finish": ["s2"],
+  "finish": ["s1"],
   "inputs": {
     "digit": "^[0-9]{1}$",
     "non-digit": "^[^0-9]{1}$"
@@ -11,8 +11,9 @@
       "non-digit": "s2"
     },
     "s1": {
-      "digit": "s1",
-      "non-digit": "s2"
+      "digit": "s1"
+    },
+    "s2": {
     }
   }
 }

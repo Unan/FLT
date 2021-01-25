@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
  */
 public class FsmReader {
 
-    public FSM readFsm() throws IOException {
+    public FSM readFsm(String fileName) throws IOException {
 
-        FsmJson fsmJson = readFsmJson();
+        FsmJson fsmJson = readFsmJson(fileName);
 
         List<InputType> inputTypes = fsmJson.getInputs().entrySet().stream()
                 .map(entry -> new InputType(entry.getKey(), entry.getValue()))
@@ -36,10 +36,10 @@ public class FsmReader {
         );
     }
 
-    private FsmJson readFsmJson() throws IOException {
+    private FsmJson readFsmJson(String fileName) throws IOException {
         File file = new File(Objects.requireNonNull(getClass()
                 .getClassLoader()
-                .getResource("integer.json"))
+                .getResource(fileName))
                 .getFile());
 
         StringBuilder stringBuilder = new StringBuilder();

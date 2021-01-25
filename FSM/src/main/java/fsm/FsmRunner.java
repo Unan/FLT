@@ -14,10 +14,8 @@ public class FsmRunner {
     private int skip;
 
     private String currentState;
-    private int maxSuccess = 0;
     private boolean success = false;
-    String latestFinishState = null;
-    int latestFinishSuccess = 0;
+    private int maxSuccess = 0;
 
     public FsmRunner(FSM fsm, String input) {
         if (skip >= input.length()) {
@@ -44,17 +42,14 @@ public class FsmRunner {
         for (int i = skip; i < inputArray.length; i++) {
             try {
                 currentState = step(inputArray[i]);
-                maxSuccess++;
                 if (fsm.getFinish().contains(currentState)) {
-                    latestFinishState = currentState;
-                    latestFinishSuccess = maxSuccess;
+                    maxSuccess = i + 1;
                 }
             } catch (Exception e) {
                 break;
             }
         }
-
-        success = latestFinishSuccess != 0;
+        success = maxSuccess != 0;
         return result();
     }
 
@@ -72,7 +67,7 @@ public class FsmRunner {
     }
 
     private String result() {
-        return input + " -> " + latestFinishSuccess + " : " + success;
+        return input + " -> " + maxSuccess + " : " + success;
     }
 
 }

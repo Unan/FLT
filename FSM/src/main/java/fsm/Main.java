@@ -9,6 +9,8 @@ public class Main {
         FSM fsmSpace = new FsmReader().readFsm("space.json");
         FSM fsmSemicolon = new FsmReader().readFsm("semicolon.json");
         FSM fsmOperation = new FsmReader().readFsm("operation.json");
+        FSM fsmKeywordInteger = new FsmReader().readFsm("keyword-integer.json");
+        FSM fsmKeywordDouble = new FsmReader().readFsm("keyword-double.json");
 
 
         System.out.println("Integer");
@@ -42,6 +44,15 @@ public class Main {
         System.out.println(new FsmRunner(fsmOperation, "*").max());
         System.out.println(new FsmRunner(fsmOperation, "=").max());
 
+        System.out.println("\nKeyword Integer");
+        System.out.println(new FsmRunner(fsmKeywordInteger, "in").max());
+        System.out.println(new FsmRunner(fsmKeywordInteger, "int").max());
+        System.out.println(new FsmRunner(fsmKeywordInteger, "intgr").max());
+        System.out.println(new FsmRunner(fsmKeywordInteger, "integer").max());
+
+        System.out.println("\nKeyword Double");
+        System.out.println(new FsmRunner(fsmKeywordDouble, "double").max());
+        System.out.println(new FsmRunner(fsmKeywordDouble, "doub").max());
 
     }
 }

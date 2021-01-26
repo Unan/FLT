@@ -11,6 +11,7 @@ public class Main {
         FSM fsmOperation = new FsmReader().readFsm("operation.json");
         FSM fsmKeywordInteger = new FsmReader().readFsm("keyword-integer.json");
         FSM fsmKeywordDouble = new FsmReader().readFsm("keyword-double.json");
+        FSM fsmId = new FsmReader().readFsm("id.json");
 
 
         System.out.println("Integer");
@@ -34,7 +35,6 @@ public class Main {
         System.out.println(new FsmRunner(fsmSpace, "  a  ").max());
         System.out.println(new FsmRunner(fsmSpace, "\n").max());
 
-
         System.out.println("\nSemicolon");
         System.out.println(new FsmRunner(fsmSemicolon, ";").max());
 
@@ -53,6 +53,9 @@ public class Main {
         System.out.println("\nKeyword Double");
         System.out.println(new FsmRunner(fsmKeywordDouble, "double").max());
         System.out.println(new FsmRunner(fsmKeywordDouble, "doub").max());
+
+        System.out.println("\nId");
+        System.out.println(new FsmRunner(fsmId, "a").max());
 
     }
 }

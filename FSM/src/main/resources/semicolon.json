@@ -1,0 +1,15 @@
+{
+  "start": "s0",
+  "finish": ["s1"],
+  "inputs": {
+    "whitespace": "^[;]{1}$"
+  },
+  "matrix": {
+    "s0": {
+      "whitespace": "s1"
+    },
+    "s1": {
+      "whitespace": "s1"
+    }
+  }
+}

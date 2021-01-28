@@ -1,4 +1,4 @@
-package component;
+package app.component;
 
 import java.util.regex.Pattern;
 

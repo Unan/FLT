@@ -1,7 +1,7 @@
-package fsm;
+package app.fsm;
 
-import component.InputType;
-import component.TransitionFunction;
+import app.component.InputType;
+import app.component.TransitionFunction;
 
 /**
  * Получает на вход класс-автомат {@link FSM}, которому подаёт на вход строку и управляет его состояниями

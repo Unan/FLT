@@ -1,6 +1,8 @@
-import fsm.FSM;
-import fsm.FsmReader;
-import fsm.FsmRunner;
+package app;
+
+import app.fsm.FSM;
+import app.fsm.FsmReader;
+import app.fsm.FsmRunner;
 
 import java.io.IOException;
 
@@ -11,8 +13,8 @@ public class FsmApp {
         FSM fsmSpace = new FsmReader().readFsm("space.json");
         FSM fsmSemicolon = new FsmReader().readFsm("semicolon.json");
         FSM fsmOperation = new FsmReader().readFsm("operation.json");
-        FSM fsmKeywordInteger = new FsmReader().readFsm("keyword-integer.json");
-        FSM fsmKeywordDouble = new FsmReader().readFsm("keyword-double.json");
+        FSM fsmKeywordInteger = new FsmReader().readFsm("keyword/kw-integer.json");
+        FSM fsmKeywordDouble = new FsmReader().readFsm("keyword/kw-double.json");
         FSM fsmId = new FsmReader().readFsm("id.json");
 
 

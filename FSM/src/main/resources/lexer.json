@@ -1,12 +1,32 @@
 [
   {
-    "type": "Keyword integer",
-    "path": "keyword-integer.json",
+    "type": "Keyword",
+    "path": "keyword/kw-integer.json",
     "priority": 3
   },
   {
-    "type": "Keyword double",
-    "path": "keyword-double.json",
+    "type": "Keyword",
+    "path": "keyword/kw-double.json",
+    "priority": 3
+  },
+  {
+    "type": "Keyword",
+    "path": "keyword/kw-boolean.json",
+    "priority": 3
+  },
+  {
+    "type": "Keyword",
+    "path": "keyword/kw-break.json",
+    "priority": 3
+  },
+  {
+    "type": "Keyword",
+    "path": "keyword/kw-while.json",
+    "priority": 3
+  },
+  {
+    "type": "Keyword",
+    "path": "keyword/kw-exit.json",
     "priority": 3
   },
   {
@@ -15,23 +35,33 @@
     "priority": 3
   },
   {
-    "type": "Id",
-    "path": "id.json",
-    "priority": 2
-  },
-  {
     "type": "Integer",
     "path": "integer.json",
-    "priority": 1
+    "priority": 2
   },
   {
     "type": "Double",
     "path": "double.json",
+    "priority": 2
+  },
+  {
+    "type": "Boolean",
+    "path": "boolean.json",
+    "priority": 2
+  },
+  {
+    "type": "Id",
+    "path": "id.json",
     "priority": 1
   },
   {
     "type": "Semicolon",
     "path": "semicolon.json",
+    "priority": 0
+  },
+  {
+    "type": "Brace",
+    "path": "brace.json",
     "priority": 0
   },
   {

@@ -1,9 +1,9 @@
-package lexer;
+package app.lexer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import fsm.FsmReader;
+import app.fsm.FsmReader;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -1,3 +1,0 @@
-int a = 5;
-double b = -7e+18;
-double result = b * a;

@@ -1,4 +1,4 @@
-package lexer;
+package app.lexer;
 
 public class Token {
 

@@ -1,7 +1,7 @@
-package fsm;
+package app.fsm;
 
-import component.InputType;
-import component.TransitionFunction;
+import app.component.InputType;
+import app.component.TransitionFunction;
 
 import java.util.List;
 

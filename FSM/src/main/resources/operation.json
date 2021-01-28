@@ -1,16 +1,15 @@
 {
   "start": "s0",
-  "finish": ["s1", "s2", "s3"],
+  "finish": ["s1", "s2"],
   "inputs": {
-    "ops": "^[-<>=+*\\/]{1}$"
+    "operation": "^[-<>=+*&\\/]{1}$"
   },
   "matrix": {
     "s0": {
-      "ops": "s1",
-      "<": "s2"
+      "operation": "s1"
     },
-    "s2": {
-      ">": "s3"
+    "s1": {
+      "operation": "s2"
     }
   }
 }

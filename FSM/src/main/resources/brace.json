@@ -1,0 +1,12 @@
+{
+  "start": "s0",
+  "finish": ["s1"],
+  "inputs": {
+    "brace": "^[{|}(|)]{1}$"
+  },
+  "matrix": {
+    "s0": {
+      "brace": "s1"
+    }
+  }
+}

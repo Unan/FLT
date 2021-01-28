@@ -1,8 +1,8 @@
-package fsm;
+package app.fsm;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import component.InputType;
-import component.TransitionFunction;
+import app.component.InputType;
+import app.component.TransitionFunction;
 
 import java.io.*;
 import java.util.List;

@@ -1,6 +1,6 @@
-package lexer;
+package app.lexer;
 
-import fsm.FSM;
+import app.fsm.FSM;
 
 public class Entry {
 

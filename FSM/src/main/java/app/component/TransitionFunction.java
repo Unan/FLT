@@ -1,4 +1,4 @@
-package component;
+package app.component;
 
 /**
  * Функция перехода. Содержит информацию об исходном состоянии {@link TransitionFunction#originalState},

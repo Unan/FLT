@@ -1,8 +1,10 @@
-package fsm;
+import fsm.FSM;
+import fsm.FsmReader;
+import fsm.FsmRunner;
 
 import java.io.IOException;
 
-public class Main {
+public class FsmApp {
     public static void main(String[] args) throws IOException {
         FSM fsmInteger = new FsmReader().readFsm("integer.json");
         FSM fsmDouble = new FsmReader().readFsm("double.json");

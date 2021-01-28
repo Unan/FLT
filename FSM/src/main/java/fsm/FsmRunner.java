@@ -18,9 +18,6 @@ public class FsmRunner {
     private int maxSuccess = 0;
 
     public FsmRunner(FSM fsm, String input) {
-        if (skip >= input.length()) {
-            throw new IllegalArgumentException("skip should be shorter then input length");
-        }
         this.fsm = fsm;
         this.input = input;
         this.skip = 0;
@@ -37,7 +34,7 @@ public class FsmRunner {
         this.currentState = fsm.getStart();
     }
 
-    public String max() {
+    public int max() {
         char[] inputArray = input.toCharArray();
         for (int i = skip; i < inputArray.length; i++) {
             try {
@@ -50,7 +47,7 @@ public class FsmRunner {
             }
         }
         success = maxSuccess != 0;
-        return result();
+        return maxSuccess;
     }
 
     public String step(char c) {

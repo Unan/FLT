@@ -1,0 +1,42 @@
+[
+  {
+    "type": "Keyword integer",
+    "path": "keyword-integer.json",
+    "priority": 3
+  },
+  {
+    "type": "Keyword double",
+    "path": "keyword-double.json",
+    "priority": 3
+  },
+  {
+    "type": "Operation",
+    "path": "operation.json",
+    "priority": 3
+  },
+  {
+    "type": "Id",
+    "path": "id.json",
+    "priority": 2
+  },
+  {
+    "type": "Integer",
+    "path": "integer.json",
+    "priority": 1
+  },
+  {
+    "type": "Double",
+    "path": "double.json",
+    "priority": 1
+  },
+  {
+    "type": "Semicolon",
+    "path": "semicolon.json",
+    "priority": 0
+  },
+  {
+    "type": "Space",
+    "path": "space.json",
+    "priority": 0
+  }
+]

@@ -50,6 +50,11 @@ public class FsmRunner {
         return maxSuccess;
     }
 
+    public String maxWithResult() {
+        max();
+        return input + " -> " + maxSuccess + " : " + success;
+    }
+
     public String step(char c) {
         InputType inputType = fsm.getInputs().stream()
                 .filter(it -> it.getInputPattern().matcher(String.valueOf(c)).find())
@@ -61,10 +66,6 @@ public class FsmRunner {
                 .findFirst().orElseThrow();
 
         return transitionFunction.getTransitionState();
-    }
-
-    private String result() {
-        return input + " -> " + maxSuccess + " : " + success;
     }
 
 }

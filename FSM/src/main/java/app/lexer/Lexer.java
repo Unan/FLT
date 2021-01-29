@@ -16,39 +16,28 @@ public class Lexer {
         this.entries = new EntryReader().readEntries(lexerFileName);
     }
 
-    public List<String> readSnippet(String input) throws IOException {
+    public String readSnippet(String input) throws FileNotFoundException {
         File file = new File(Objects.requireNonNull(getClass()
                 .getClassLoader()
                 .getResource(input))
                 .getFile());
 
-        StringBuilder stringBuilder = new StringBuilder();
-        new BufferedReader(new InputStreamReader(new FileInputStream(file)))
-                .lines()
-                .forEach(stringBuilder::append);
-
-        return Arrays.asList(stringBuilder.toString()
-                .split("(?<=;)|(?=;)|(?<=\\s)|(?=\\s)|(?<=!)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))"));
+        return new BufferedReader(new InputStreamReader(new FileInputStream(file)))
+                .lines().collect(Collectors.joining("\n"));
     }
 
     public List<Token> tokenize(String inputFile) throws IOException {
-        return readSnippet(inputFile).stream()
-                .map(this::newGetToken)
+        return split(inputFile).stream()
+                .map(this::getToken)
                 .collect(Collectors.toList());
     }
 
-
-    public Token getToken(String string) {
-        for (Entry entry : entries) {
-            int max = new FsmRunner(entry.getFsm(), string).max();
-            if (max > 0) {
-                return new Token(entry.getEntryType(), string.substring(0, max));
-            }
-        }
-        return null;
+    public List<String> split(String input) throws IOException {
+        return Arrays.asList(readSnippet(input)
+                .split("(?<=;)|(?=;)|(?<=\\s)|(?=\\s)|(?<=!)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))"));
     }
 
-    public Token newGetToken(String string) {
+    public Token getToken(String string) {
         List<Pair<Entry, Integer>> result = new ArrayList<>();
         for (Entry entry : entries) {
             int max = new FsmRunner(entry.getFsm(), string).max();
@@ -82,9 +71,19 @@ public class Lexer {
             }
         }
 
-        if (resultEntry == null)
-            return null;
-        return new Token(resultEntry.getEntryType(), string.substring(0, maxSuccess));
+        return resultEntry == null
+                ? new Token("WARNING: Unexpected token:", string.substring(0, maxSuccess))
+                : replaceSpace(new Token(resultEntry.getEntryType(), string.substring(0, maxSuccess)));
+    }
+
+    public Token replaceSpace(Token token) {
+        if (token.getEntryType().equals("Space")) {
+            token.setValue(token.getValue()
+                    .replace(' ', '_')
+                    .replace("\t", "\\t")
+                    .replace("\n", "\\n"));
+        }
+        return token;
     }
 
 }

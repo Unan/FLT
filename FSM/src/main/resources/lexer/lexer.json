@@ -1,72 +1,72 @@
 [
   {
     "type": "Keyword",
-    "path": "keyword/kw-integer.json",
+    "path": "fsm/kw-integer.json",
     "priority": 3
   },
   {
     "type": "Keyword",
-    "path": "keyword/kw-double.json",
+    "path": "fsm/kw-double.json",
     "priority": 3
   },
   {
     "type": "Keyword",
-    "path": "keyword/kw-boolean.json",
+    "path": "fsm/kw-boolean.json",
     "priority": 3
   },
   {
     "type": "Keyword",
-    "path": "keyword/kw-break.json",
+    "path": "fsm/kw-break.json",
     "priority": 3
   },
   {
     "type": "Keyword",
-    "path": "keyword/kw-while.json",
+    "path": "fsm/kw-while.json",
     "priority": 3
   },
   {
     "type": "Keyword",
-    "path": "keyword/kw-exit.json",
+    "path": "fsm/kw-exit.json",
     "priority": 3
   },
   {
     "type": "Operation",
-    "path": "operation.json",
+    "path": "fsm/operation.json",
     "priority": 3
   },
   {
     "type": "Integer",
-    "path": "integer.json",
+    "path": "fsm/integer.json",
     "priority": 2
   },
   {
     "type": "Double",
-    "path": "double.json",
+    "path": "fsm/double.json",
     "priority": 2
   },
   {
     "type": "Boolean",
-    "path": "boolean.json",
+    "path": "fsm/boolean.json",
     "priority": 2
   },
   {
     "type": "Id",
-    "path": "id.json",
+    "path": "fsm/id.json",
     "priority": 1
   },
   {
     "type": "Semicolon",
-    "path": "semicolon.json",
+    "path": "fsm/semicolon.json",
     "priority": 0
   },
   {
     "type": "Brace",
-    "path": "brace.json",
+    "path": "fsm/brace.json",
     "priority": 0
   },
   {
     "type": "Space",
-    "path": "space.json",
+    "path": "fsm/space.json",
     "priority": 0
   }
 ]

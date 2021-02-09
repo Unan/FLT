@@ -2,7 +2,7 @@
   "start": "s0",
   "finish": ["s1", "s2"],
   "inputs": {
-    "operation": "^[-<>=+*&\\/]{1}$"
+    "operation": "^[-<>=+*&\\/!]{1}$"
   },
   "matrix": {
     "s0": {

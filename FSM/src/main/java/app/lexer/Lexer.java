@@ -34,7 +34,7 @@ public class Lexer {
 
     public List<String> split(String input) throws IOException {
         return Arrays.asList(readSnippet(input)
-                .split("(?<=;)|(?=;)|(?<=\\s)|(?=\\s)|(?<=!)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))"));
+                .split("(?<=;)|(?=;)|(?<=\\s)|(?=\\s)|(?<=!)|(?=!)|(?<=/)|(?=/)|(?<==)|(?==)|(?<=\\()|(?=\\()|(?<=\\))|(?=\\))"));
     }
 
     public Token getToken(String string) {

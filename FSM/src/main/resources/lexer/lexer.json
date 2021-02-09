@@ -57,7 +57,7 @@
   {
     "type": "Semicolon",
     "path": "fsm/semicolon.json",
-    "priority": 0
+    "priority": 3
   },
   {
     "type": "Brace",
